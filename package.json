@@ -3,10 +3,9 @@
   "author": "Yandex Data UI Team <data-ui@yandex-team.ru>",
   "description": "Make documentation using yfm-docs in Markdown and HTML formats",
   "license": "MIT",
-  "version": "1.11.7",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yandex-cloud/yfm-docs.git"
+    "url": "git@github.com:batFormat/yfm-docs.git"
   },
   "bin": {
     "yfm": "build/index.js"
@@ -17,6 +16,7 @@
     "src"
   ],
   "scripts": {
+    "doc": "npm run start -i srcDocs -o docs",
     "build": "webpack",
     "start": "node build/index.js",
     "lint": "eslint \"./**/*.{js,jsx,ts,tsx}\"",
@@ -24,7 +24,7 @@
     "prepublishOnly": "npm run lint && npm run build"
   },
   "dependencies": {
-    "@doc-tools/components": "^1.5.3",
+    "@doc-tools/components": "^1.9.14",
     "@doc-tools/transform": "^1.8.3",
     "@octokit/core": "^3.3.0",
     "aws-sdk": "^2.773.0",
@@ -42,8 +42,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/plugin-syntax-top-level-await": "^7.12.13",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-top-level-await": "^7.12.13",
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
     "@babel/preset-react": "^7.12.13",
