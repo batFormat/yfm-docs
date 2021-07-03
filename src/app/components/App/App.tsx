@@ -92,7 +92,9 @@ export function App(props: DocInnerProps): ReactElement {
 
     return (
         <div className="Layout Layout_no-footer Layout_type_doc">
-            <div className="Layout__header">Header</div>
+            <div className="Layout__header">
+                <header>Header</header>
+            </div>
             <div className="Layout__body">
                 <div className="App Layout__content">
                     {data.leading ? (
